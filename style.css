@@ -1,0 +1,274 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+/* navbar section */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#logo {
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: end;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+#menu {
+    width: 50%;
+}
+
+/* header section */
+#header {
+    background: url("./intro.jpg");
+    background-size: cover;
+    background-position-y: center;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#header button {
+    margin-top: 20px;
+    outline: none;
+    background-color: orange;
+    border: none;
+    width: auto;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#header button a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#header button:hover {
+    background-color: red;
+}
+
+/* mission section */
+.subtitle {
+    text-align: center;
+    text-decoration: underline;
+    margin: 15px 0 20px;
+}
+
+#mission .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.levels {
+    height: 35vh;
+    width: 30%;
+    border: 3px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.levels:hover {
+    background-color: brown;
+    cursor: pointer;
+}
+
+/* partners section */
+#dance-styles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 4vh;
+    column-gap: 2vw;
+    padding: 0 5%;
+}
+
+#dance-styles img {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+
+#dance-styles h4 {
+    text-align: center;
+}
+
+#dance-styles .style:hover {
+    transform: scale(1.1);
+}
+
+.style img {
+    min-height: 30vh;
+}
+
+/* contact section */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+textarea {
+    width: 50%;
+    margin: 0 auto 8px;
+    padding: 5px;
+    outline: none;
+    background-color: rgb(95, 94, 94);
+    color: black;
+    border-radius: 5px;
+}
+
+form input::placeholder,
+textarea::placeholder {
+    color: white;
+}
+
+form button {
+    width: 15%;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: red;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* footer section */
+footer {
+    background-color: rgb(95, 94, 94);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    font-weight: 800;
+}
+
+/* css for responsiveness */
+@media only screen and (max-width:800px) {
+    nav ul li {
+        font-size: 15px;
+        margin: 0 5px;
+    }
+
+    #header h1 {
+        font-size: 30px;
+    }
+
+    #header h3 {
+        font-size: 15px;
+    }
+
+    #header button {
+        width: auto;
+    }
+
+    .container .levels {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    nav {
+        display: block;
+        padding: 0;
+        font-size: 10px;
+        height: fit-content;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    #menu {
+        width: 100%;
+    }
+
+    #header {
+        height: 40vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #header h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .levels {
+        width: 90%;
+        height: 15vh;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    #contact input,
+    textarea {
+        width: 90%;
+    }
+
+    #dance-styles {
+        grid-template-columns: 1fr;
+    }
+
+    #dance-styles .style:hover {
+        transform: scale(1.05);
+    }
+
+    form button {
+        width: 30%;
+        padding: 5px;
+    }
+}
